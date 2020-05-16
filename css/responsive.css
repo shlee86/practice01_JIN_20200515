@@ -11,8 +11,15 @@
   overflow: hidden;
 }
 
+.nav-un_shown {
+  display:none;
+}
+
 @media (max-width: 1000px) {
-  
+  main {
+    padding: 0;
+    
+  }
 
   .main_container {
     width:100%;
@@ -21,17 +28,25 @@
     flex-direction: column;
   }
 
+
   .small_box {
     display: flex;
     flex-direction: row;
-    
+  
   }
 
   .small_box a {
-    width: 50%;
+    width: 44%;
+  
   }
+
   .nav-bar {
     display: none;
+  }
+
+  footer {
+  /* display: flex;
+  flex-direction: column; */
   }
 
   .list {
@@ -81,7 +96,6 @@
   .listitem3, .listitem4 {
     width: 100%;
     font-size: 16px;
-    
   }
 
   .listitem3 a {
@@ -102,33 +116,28 @@
     font-size: 4px;
   }
 
-  .listitem3 h5 {
-
-  }
 
   .listC {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    width:100%; */
+    width:100%;
     padding:32px;
   }
 
-.footer {
-  width: 100%;
-  /* margin-right: 24px; */
-  box-sizing: border-box;
-}
-
 }
 
 
-@media (min-width: 670px) {
+
+@media (min-width: 669px) {
   
   .main_contents {
-    width:50%;
+    width:100%;
   }
-  .side-bar {
-    width:50%;
+
+  .small_box {
+    display: flex;
+    flex-direction: row;
+    
   }
 
   #nav-drawer {
@@ -140,20 +149,36 @@
 
 /* スマフォ対応 */
 
-/* ハンバーガーメニュー */
-
 /*チェックボックス非表示*/
 
-/* .nav-un_shown {
-  display:none;
-} */
+@media (max-width: 670px){
 
+  header {
+    height: 100%;
+  }
 
+  header h1 {
+    padding:40px, 0;
+    text-align: center;
+  }
 
-@media (max-width: 559px){
+  .small_box {
+    display: flex;
+    flex-direction: row;
+    margin:0 auto;
+  }
+  .small_box a {
+    width:40%;
+   margin-left:8px;
+   margin-right:0;
+  }
+  
+
+/* ハンバーガーメニュー */
   .headerContainer {
     position: relative;
   }
+
   #nav-drawer {
     position: absolute;
     top: 40px;
@@ -197,12 +222,12 @@
     position: fixed;
     z-index: 99;
     top: 0;/*全体に広がるように*/
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background: black;
     opacity: 0;
-    transition: .3s ease-in-out;
+    transition: .5s ease-in-out;
   }
   
   /*中身*/
@@ -215,8 +240,8 @@
     width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
     max-width: 100%;/*最大幅（調整してください）*/
     height: 100%;
-    background: #fff;/*背景色*/
-    transition: .3s ease-in-out;/*滑らかに表示*/
+    background:white;/*背景色*/
+    transition: .5s ease-in-out;/*滑らかに表示*/
     -webkit-transform: translateY(-120%);
     transform: translateY(-120%);/*右に隠しておく*/
   }
@@ -228,10 +253,12 @@
   }
   
   #nav-input:checked ~ #nav-content {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);/*中身を表示（左へスライド）*/
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);/*中身を表示（左へスライド）*/
     box-shadow: 6px 0 25px rgba(0,0,0,.15);
   }
+/* ハンバーガーメニュー終わり */
+
 }
 
-/* ハンバーガーメニュー終わり */
+
