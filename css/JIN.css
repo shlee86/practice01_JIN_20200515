@@ -518,7 +518,7 @@ main {
 
 
 .list {
-  /* height:616px; */
+  
   /* background-color: rgb(43, 43, 43); */
   padding:56px 104px;
   display: flex;
@@ -678,8 +678,6 @@ main {
  padding-left:8px;
 }
 
-
-
 .thumbnail2 p {
   position: absolute;
   top: 16px;
@@ -698,8 +696,8 @@ main {
 }
 
 .thumbnail2 {
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
   padding-bottom: 24px;
 }
 
@@ -712,9 +710,6 @@ footer {
 }
 
 hr {
- 
-
-  
   /* border-width: 2px 0 0 0; 太さ */
   /* border-style: thin; 線種 */
   /* border-color:white;   線色 */
