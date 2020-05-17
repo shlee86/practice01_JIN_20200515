@@ -8,14 +8,49 @@
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
   <script src="https://kit.fontawesome.com/faf3089d69.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://i.icomoon.io/public/temp/14fb164705/UntitledProject/style.css">
-  <script src="simplescrollup.js"></script>
-</head>
+ </head>
 
 <body>
   <div class="wrap">
     <header>
       <h1><span>JIN </span>Demo Site 4</h1>
-      <div id="nav-drawer">
+      <div class="headerContainer">
+        <h1><a href=""><img src="/asset/common/logo.svg" class="headerLogo" alt=""></a></h1>
+        
+        <div id="nav-drawer">
+          <input id="nav-input" type="checkbox" class="nav-unshown">
+          <label id="nav-open" for="nav-input"><span></span></label>
+          <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+          <div id="nav-content">
+            <nav>
+              <h1>MENU</h1>
+              <ul class="headerLink">
+                <li class="navTitle"><a href="#"><span></span>HOME</a></li>
+                <li class="navTitle"><a href="#">PROFILE</a></li>
+                <li class="navTitle"><a href="#">SERVICE</a></li>
+                <li class="navTitle"><a href="#">REVIEW</a></li>
+                <li class="navTitle"><a href="#">CONTACT</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      
+        <div id="nav-content">
+          <nav>
+            <ul class="headerLink">
+                <li class="navTitle"><a href="#">HOME</a></li>
+                <li class="navTitle"><a href="#">PROFILE</a></li>
+                <li class="navTitle"><a href="#">SERVICE</a></li>
+                <li class="navTitle"><a href="#">REVIEW</a></li>
+                <li class="navTitle"><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+
+
+      <!-- <div id="nav-drawer">
         <input id="nav-input" type="checkbox" class="nav-un_shown">
         <label id="nav-open" for="nav-input"><span></span></label>
         <label class="nav-un_shown" id="nav-close" for="nav-input"></label>
@@ -46,7 +81,7 @@
             </ul>
           </div>
         </nav>
-      </div>
+      </div> -->
 
     </header>
 
@@ -330,7 +365,7 @@
         </div>
       </div>
 
-      <div id="page_top"><a href="#" duraction="1000" height-hide="100" easing="easeInOutQuad" class="simplescrollup__button simplescrollup__button--hide"><i class="fas fa-chevron-up"></i></a>
+      <div id="page_top"><a href="#"><i class="fas fa-chevron-up"></i></a>
       </div>
 
       <hr style="border:0;border-top:1px solid white;">
