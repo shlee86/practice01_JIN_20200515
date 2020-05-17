@@ -151,6 +151,10 @@
 
 /*チェックボックス非表示*/
 
+.nav-unshown {
+  display:none;
+}
+
 @media (max-width: 670px){
 
   header {
@@ -181,13 +185,8 @@
 
   #nav-drawer {
     position: absolute;
-    top: 40px;
+    top: 16px;
     right: 24px;
-  }
-  
-  /*チェックボックス等は非表示に*/
-  .nav-un_shown {
-    display:none;
   }
   
   /*アイコンのスペース*/
@@ -218,38 +217,93 @@
   
   /*閉じる用の薄黒カバー*/
   #nav-close {
-    display: none;/*はじめは隠しておく*/
-    position: fixed;
-    z-index: 99;
-    top: 0;/*全体に広がるように*/
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    opacity: 0;
-    transition: .5s ease-in-out;
+  display: none;/*はじめは隠しておく*/
+  position: fixed;
+  z-index: 99;
+  top: 0;/*全体に広がるように*/
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .5s ease-in-out;
   }
   
   /*中身*/
   #nav-content {
-    overflow: auto;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 9999;/*最前面に*/
-    width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
-    max-width: 100%;/*最大幅（調整してください）*/
-    height: 100%;
-    background:white;/*背景色*/
-    transition: .5s ease-in-out;/*滑らかに表示*/
-    -webkit-transform: translateY(-120%);
-    transform: translateY(-120%);/*右に隠しておく*/
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;/*最前面に*/
+  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+  max-width: 100%;/*最大幅（調整してください）*/
+  height: 100%;
+  background:white;/*背景色*/
+  transition: .5s ease-in-out;/*滑らかに表示*/
+  -webkit-transform: translateY(-120%);
+  transform: translateY(-120%);/*右に隠しておく*/
   }
+
+  #nav-content h1 {
+  padding: 24px;
+  }
+
+.headerLink {
+  display: flex;
+  flex-direction: column;
+  padding-left:88px;
+  float: left;
+  text-align: left;
+}
+
+.headerLink a::after {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+
+ .navTitle a {
+  font-size: 24px;
+  padding: 16px;
+  text-align: left;
+ }
+
+ .headerLink a:hover::after {
+  bottom: 0;
+  opacity: 0;
+  visibility: none;
+}
+
+.headerLink li {
+  list-style-type: none; /*点を非表示*/
+  position: relative; /*基準位置*/
+  padding-left: 0.6em;
   
+  }
+
+.headerLink li a {
+  text-align: left;
+
+}
+
+.headerLink li:before {
+  border-radius: 50%; /*丸くする*/
+  width:16px; /*点の幅*/
+  height: 16px; /*点の高さ*/
+  display: block;
+  position: absolute; /*絶対配置*/
+  left: 0; /*点の位置*/
+  top: 1.4em; /*点の位置*/
+  content: "";
+  background: lime; /*点の色*/
+  }
+
+
   /*チェックが入ったらもろもろ表示*/
   #nav-input:checked ~ #nav-close {
     display: block;/*カバーを表示*/
-    opacity: .5;
+    opacity: .2;
   }
   
   #nav-input:checked ~ #nav-content {
