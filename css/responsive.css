@@ -41,6 +41,10 @@
     width: 44%;
   }
 
+  .recent_post, .category, .tag, .search, .recommend {
+    padding: 12px;
+  }
+
   .list {
     display: flex;
     flex-direction: column;
@@ -138,7 +142,23 @@
     margin-right: 0;
   }
 
-/* ハンバーガーメニュー */
+  .list {
+    padding: 8px;
+  }
+
+  .thumbnail2 span {
+    font-size: 12px;
+  }
+
+  .thumbnail2 a {
+    padding: 16px 16px 0 16px;
+  }
+
+  .boxLink h6 {
+    font-size: 8px;
+  }
+
+  /* ハンバーガーメニュー */
   .headerContainer {
     position: relative;
   }
@@ -146,15 +166,15 @@
   #nav-drawer {
     display: block;
     position: absolute;
-    top: 16px;
-    right: 24px;
+    top: -32px;
+    right: 8px;
   }
 
   /*アイコンのスペース*/
   #nav-open {
     display: inline-block;
     width: 30px;
-    height: 22px;
+    height: 24px;
     vertical-align: middle;
   }
 
@@ -206,6 +226,7 @@
     transition: .5s ease-in-out;/*滑らかに表示*/
     -webkit-transform: translateY(-120%);
     transform: translateY(-120%);/*上に隠しておく*/
+    text-align: left;
   }
 
   #nav-content h1 {
@@ -217,7 +238,7 @@
     flex-direction: column;
     padding-left: 88px;
     float: left;
-    text-align: left;
+    align-items: flex-start;
   }
 
   .headerLink a::after {
