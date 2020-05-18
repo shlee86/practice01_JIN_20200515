@@ -1,65 +1,54 @@
-*  {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
+/* 全体の反映 */
 .wrap {
-  overflow: hidden;
+	overflow: hidden;
 }
 
-.nav-un_shown {
+.nav-unshown {
+  display: none;
+}
+
+.main_contents {
+  width:100%;
+}
+
+.small_box {
+  display: flex;
+  flex-direction: row;
+}
+
+#nav-drawer {
   display:none;
 }
 
 @media (max-width: 1000px) {
   main {
     padding: 0;
-    
   }
 
   .main_container {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
   }
 
-
   .small_box {
     display: flex;
     flex-direction: row;
-  
   }
 
   .small_box a {
     width: 44%;
-  
-  }
-
-  .nav-bar {
-    display: none;
-  }
-
-  footer {
-  /* display: flex;
-  flex-direction: column; */
   }
 
   .list {
-  display: flex;
-  flex-direction: column;
-  margin:0px;
-  padding:16px;
-
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
   }
 
   .listA {
   width: 100%;
-
   }
 
   .listitem1 {
@@ -71,26 +60,26 @@
   }
 
   .listitem2 .container {
-   text-align: left;
+    text-align: left;
   }
 
-  .listitem2 h5, .listitem3 h5, .listitem4 h5, .listC h5{
-  border-left:none;
-  border-bottom: solid 3px greenyellow;
-  padding-bottom:12px;
-  margin-right: 16px;
-  margin-bottom: 16px;
-  font-size: 24px;
-  text-align: left;
-  box-sizing:border-box;
+  .listitem2 h5, .listitem3 h5, .listitem4 h5, .listC h5 {
+    border-left:none;
+    border-bottom: solid 3px greenyellow;
+    padding-bottom:12px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    font-size: 24px;
+    text-align: left;
+    box-sizing:border-box;
   }
 
   .listB {
     display: flex;
     flex-direction: column;
     width:100%;
-    padding:32px;
     text-align: left;
+    margin-bottom: 48px;
   }
 
   .listitem3, .listitem4 {
@@ -98,65 +87,37 @@
     font-size: 16px;
   }
 
+  .listitem3 {
+    margin-bottom: 48px;
+  }
+
   .listitem3 a {
-  border-bottom: 1px solid white;
-  padding: 16px 0;
-  margin-right: 16px;
+    border-bottom: 1px solid white;
+    padding: 16px 0;
+    margin-right: 16px;
   }
 
   .listitem3 span, .listitem4 span {
     background-color: white;
     color: black;
-    height:40px;
-    width:48px;
+    height: 40px;
+    width: 48px;
     border-radius: 50%;
     line-height: center;
-    padding:0px 4px;
+    padding: 0px 4px;
     margin-right:16px;
     font-size: 4px;
   }
-
 
   .listC {
     display: flex;
     flex-direction: column;
     width:100%;
-    padding:32px;
   }
-
-}
-
-
-
-@media (min-width: 669px) {
-  
-  .main_contents {
-    width:100%;
-  }
-
-  .small_box {
-    display: flex;
-    flex-direction: row;
-    
-  }
-
-  #nav-drawer {
-    display:none;
-  }
-  
-  
 }
 
 /* スマフォ対応 */
-
-/*チェックボックス非表示*/
-
-.nav-unshown {
-  display:none;
-}
-
-@media (max-width: 670px){
-
+@media (max-width: 670px) {
   header {
     height: 100%;
   }
@@ -169,14 +130,13 @@
   .small_box {
     display: flex;
     flex-direction: row;
-    margin:0 auto;
+    margin: 0 auto;
   }
   .small_box a {
-    width:40%;
-   margin-left:8px;
-   margin-right:0;
+    width: 42%;
+    margin-left: 8px;
+    margin-right: 0;
   }
-  
 
 /* ハンバーガーメニュー */
   .headerContainer {
@@ -184,11 +144,12 @@
   }
 
   #nav-drawer {
+    display: block;
     position: absolute;
     top: 16px;
     right: 24px;
   }
-  
+
   /*アイコンのスペース*/
   #nav-open {
     display: inline-block;
@@ -196,7 +157,7 @@
     height: 22px;
     vertical-align: middle;
   }
-  
+
   /*ハンバーガーアイコンをCSSだけで表現*/
   #nav-open span, #nav-open span:before, #nav-open span:after {
     position: absolute;
@@ -208,111 +169,104 @@
     content: '';
     cursor: pointer;
   }
+
   #nav-open span:before {
     bottom: -8px;
   }
+
   #nav-open span:after {
     bottom: -16px;
   }
-  
+
   /*閉じる用の薄黒カバー*/
   #nav-close {
-  display: none;/*はじめは隠しておく*/
-  position: fixed;
-  z-index: 99;
-  top: 0;/*全体に広がるように*/
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  opacity: 0;
-  transition: .5s ease-in-out;
+    display: none;/*はじめは隠しておく*/
+    position: fixed;
+    z-index: 99;
+    top: 0;/*全体に広がるように*/
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: .5s ease-in-out;
   }
-  
+
   /*中身*/
   #nav-content {
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 9999;/*最前面に*/
-  width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
-  max-width: 100%;/*最大幅（調整してください）*/
-  height: 100%;
-  background:white;/*背景色*/
-  transition: .5s ease-in-out;/*滑らかに表示*/
-  -webkit-transform: translateY(-120%);
-  transform: translateY(-120%);/*右に隠しておく*/
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;/*最前面に*/
+    width: 90%;/*右側に隙間を作る（閉じるカバーを表示）*/
+    max-width: 100%;/*最大幅（調整してください）*/
+    height: 100%;
+    background:white;/*背景色*/
+    transition: .5s ease-in-out;/*滑らかに表示*/
+    -webkit-transform: translateY(-120%);
+    transform: translateY(-120%);/*上に隠しておく*/
   }
 
   #nav-content h1 {
-  padding: 24px;
+    padding: 24px;
   }
 
-.headerLink {
-  display: flex;
-  flex-direction: column;
-  padding-left:88px;
-  float: left;
-  text-align: left;
-}
-
-.headerLink a::after {
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-}
-
- .navTitle a {
-  font-size: 24px;
-  padding: 16px;
-  text-align: left;
- }
-
- .headerLink a:hover::after {
-  bottom: 0;
-  opacity: 0;
-  visibility: none;
-}
-
-.headerLink li {
-  list-style-type: none; /*点を非表示*/
-  position: relative; /*基準位置*/
-  padding-left: 0.6em;
-  
+  .headerLink {
+    display: flex;
+    flex-direction: column;
+    padding-left: 88px;
+    float: left;
+    text-align: left;
   }
 
-.headerLink li a {
-  text-align: left;
-
-}
-
-.headerLink li:before {
-  border-radius: 50%; /*丸くする*/
-  width:16px; /*点の幅*/
-  height: 16px; /*点の高さ*/
-  display: block;
-  position: absolute; /*絶対配置*/
-  left: 0; /*点の位置*/
-  top: 1.4em; /*点の位置*/
-  content: "";
-  background: lime; /*点の色*/
+  .headerLink a::after {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
   }
 
+  .navTitle a {
+    font-size: 24px;
+    padding: 16px;
+    text-align: left;
+  }
+
+  .headerLink a:hover::after {
+    bottom: 0;
+    opacity: 0;
+    visibility: none;
+  }
+
+  .headerLink li {
+    list-style-type: none; /*点を非表示*/
+    position: relative; /*基準位置*/
+    padding-left: 0.6em;
+    text-align: left;
+  }
+
+  .headerLink li:before {
+    border-radius: 50%; /*丸くする*/
+    width:16px; /*点の幅*/
+    height: 16px; /*点の高さ*/
+    display: block;
+    position: absolute; /*絶対配置*/
+    left: 0; /*点の位置*/
+    top: 1em; /*点の位置*/
+    content: "";
+    background: lime; /*点の色*/
+  }
 
   /*チェックが入ったらもろもろ表示*/
   #nav-input:checked ~ #nav-close {
     display: block;/*カバーを表示*/
     opacity: .2;
   }
-  
+
   #nav-input:checked ~ #nav-content {
     -webkit-transform: translateY(0%);
     transform: translateY(0%);/*中身を表示（左へスライド）*/
     box-shadow: 6px 0 25px rgba(0,0,0,.15);
   }
 /* ハンバーガーメニュー終わり */
-
 }
-
-
