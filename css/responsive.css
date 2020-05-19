@@ -20,6 +20,7 @@
   display:none;
 }
 
+/* タブレット */
 @media (max-width: 1000px) {
   main {
     padding: 0;
@@ -52,7 +53,7 @@
   }
 
   .listA {
-  width: 100%;
+    width: 100%;
   }
 
   .listitem1 {
